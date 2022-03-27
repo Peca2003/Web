@@ -1,19 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body bgcolor="#696969">
-    <table align="center" bgcolor="#808080" height="900" width="600" border="4" bordercolor="#FFFFFF">
-        <tr>
-            <td><h2></h2></td>
-        </tr>
-        <tr>
-            <td><hr width="450"></td>
-        </tr>
-    </table>
-</body>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>border и outline</title>
+  <style>
+    .rthr {
+    padding-left: 50px;
+    }
+    .vlad{
+    margin: auto;
+    margin-top: 150px;
+    width: 450px;    height: 600px;
+    background: #808080;
+    outline: 2px solid #fff;
+    border: 3px solid #fff;
+    border-radius: 00px;
+   }
+   .frm {
+    padding-left: 86px;
+   }
+   select {
+    width: 250px;
+   }
+   .aar{
+    padding-left: 76px;
+   }
+   .rew{
+       padding-left: 135px;
+   }
+  </style>
+ </head>
+ <body bgcolor="#696969">
+  <div class="vlad">
+    <form>
+       <div class="rthr" >
+        <h1 ><p><b>Contact Form</b></p></h1>
+        <b>Please fill all entries</b>
+        <hr <hr align="left" width="85%">
+      </div>
+      <div class="frm">
+        <br>Name: <input type="text" name="name" size="30" maxlength="25"> 
+        <br><br>Email: <input type="text" name="email" size="30" maxlength="35">
+        </div>
+        <center><br><br>Message: <textarea name="message" rows="5" cols="30" wrap="hard"></textarea></center>
+        <div class="aar">
+        <br><br>Subject: 
+        <select>
+            <option>Product Inquiry</option>
+        </select>
+        </div>
+        <div class="rew">
+        <br><br><br><button style="font-family: Arial; font-size:16pt; background: #999; color:#fff;">Send</button>
+        </div>
+    </form>
+  </div>
+ </body>
 </html>
