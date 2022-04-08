@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<title>BankRU</title>
+<style>
+	h1 {
+		font-size: 120%;
+		color: #333366;
+	}
+
+	p {
+		font-style: italic;
+		font-size: 25px;
+	}
+
+	.a {
+		color: green;
+	}
+
+	.b {
+		color: blue;
+	}
+    .ots{
+        padding-left: 60px;
+    }
+</style>
+</head>
+<body>
+<form action="cgi-bin/IntVklad.php" accept-charset="UTF-8">
+<h1>Найти вклад на выгодных условиях</h1>
+<font color="red">Срок вклада</font> <select>
+	<option>1 мес</option>
+	<option>3 мес</option>
+	<option>6 мес</option>
+	<option>9 мес</option>
+	<option>1 год</option>
+	<option>1.5 года</option>
+</select>
+<br><br><br>
+<b>Название вклада:</b>&nbsp;&nbsp;<input type="text" name="name">
+<br><br><br>
+<b>Капитализация:</b>&nbsp;&nbsp;<select>
+	<option>Да</option>
+	<option>Нет</option>
+</select>
+<br><br>
+<div class="a">
+	<b>Возможность пополнения:</b>
+    <div class="ots">
+    <br>
+	<input type="radio" name="pop"> <font color="black">Да</font>
+	<br>
+	<input type="radio" name="pop"> <font color="black">Нет</font>
+    </div>
+</div>
+<br>
+<div class="b">
+	<b>Досрочное расторжение вклада:</b>
+    <div class="ots">
+    <br>
+	<input type="radio" name="rast"> <font color="black">Да</font>
+	<br>
+	<input type="radio" name="rast"> <font color="black">Нет</font> 
+    </div> 
+</div>
+	<b>Открытие on-line:</b>
+	<br>
+    <div class="ots">
+	<input type="radio" name="otk"> Да
+	<br>
+    <input type="radio" name="otk"> Нет
+    </div>
+	<br>
+    <button type="submit">Найти</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button type="reset" value="Reset form">Очистить</button>
+    <br><br><b>Спасибо за визит!</b>
+</form>
+</body>
+</html>
