@@ -1,0 +1,23 @@
+h1 {
+    font-size: 120%;
+    color: #333366;
+}
+
+p {
+    font-style: italic;
+    font-size: 25px;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+.ots{
+    padding-left: 60px;
+}
+.red{
+    color: red;
+}
