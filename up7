@@ -27,22 +27,22 @@
 <br><br>
 <div class="green">
 	<b>Возможность пополнения:</b>
+</div>
     <div class="ots">
     <br>
-	<input type="radio" name="pop"> <font color="black">Да</font>
+	<input type="radio" name="pop">Да
 	<br>
-	<input type="radio" name="pop"> <font color="black">Нет</font>
+	<input type="radio" name="pop">Нет
     </div>
-</div>
 <div class="blue">
 	<br><b>Досрочное расторжение вклада:</b>
+</div>
     <div class="ots">
     <br>
-	<input type="radio" name="rast"> <font color="black">Да</font>
+	<input type="radio" name="rast">Да
 	<br>
-	<input type="radio" name="rast"> <font color="black">Нет</font> 
+	<input type="radio" name="rast">Нет
     </div> 
-</div>
 	<b>Открытие on-line:</b>
     <div class="ots">
 	<input type="radio" name="otk"> Да
