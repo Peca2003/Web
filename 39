@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Название документа</title>
+    <style>
+      p { position: static; }
+    </style>
+  </head>
+ 
+  <body>
+    <p>Первый абзац.</p>
+    <p>Второй абзац.</p>
+  </body>
+</html>
