@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Результаты сессии и средний балл</title>
+</head>
+<body>
+<script>
+//Скрипт выполняет расчет суммы полученных баллов и выводит их в поле формы, а так жерасчет среднего балла
+function sumball()
+{
+var a1=Number (document.form1.num1.value);
+var a2=Number (document.form1.num2.value);
+var a3=Number (document.form1.num3.value);
+var a4=Number (document.form1.num4.value);
+document.form1.res.value = a1+a2+a3+a4;
+document.form1.srball.value = document.form1.res.value/4;
+}
+</script>
+<h4>Сумма баллов и средний балл по результатам сессии</h4>
+<form name="form1">
+<p>Введите оценки и нажмите кнопку <b>Вычислить</b></p>
+Оценка 1:<input type="text" name="num1" size="2" title="Введите число от 1 до 5"><br><br>
+Оценка 2:<input type="text" name="num2" size="2" title="Введите число от 1 до 5"><br><br>
+Оценка 3:<input type="text" name="num3" size="2" title="Введите число от 1 до 5"><br><br>
+Оценка 4:<input type="text" name="num4" size="2" title="Введите число от 1 до 5"><br><br>
+<input type="button" value="Вычислить" onClick="sumball()"><br>
+<br><br>
+Сумма баллов: <input type="text" name="res" size="4">&nbsp;&nbsp;&nbsp;&nbsp;
+Средний балл: <input type="text" name="srball" size="4"><br><br>
+<input type="reset">
+</form>
+</body>
+</html>
