@@ -1,0 +1,13 @@
+/* CSS для фиксации подвала */
+html, body {
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+
+}
+
+.footer {
+    margin-top: auto;
+}

@@ -1,0 +1,16 @@
+{% extends "blogs/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+  <h2>Редактировать запись</h2>
+{% endblock page_header %}
+
+{% block content %}
+<div class="container mt-5">
+    <form method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+    </form>
+</div>
+{% endblock content %}

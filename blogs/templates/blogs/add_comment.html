@@ -1,0 +1,13 @@
+{% extends "blogs/base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <h1 style="font-size: 40px; margin-left: 30px;" class="p-2"> Добавление комментария </h1>
+<div class="container mt-5">
+    <form method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,72 @@
+{% extends "blogs/base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+	<div class="alert alert-secondary text-center" role="alert">
+		<h1 class="display-6">Добро пожаловать в блог</h1>
+	</div>
+
+    {% if user.is_authenticated %}
+    <div class="alert alert-success d-flex justify-content-between align-items-center">
+        <p class="mb-0">Вы вошли как <strong>{{ user.username }}</strong></p>
+        <a href="{% url 'user_logout' %}" class="btn btn-danger btn-sm">Выход</a>
+    </div>
+		<a href="{% url 'create_post' %}" class="btn btn-success btn-lg mb-3 btn-block">Создать новую запись</a>
+{% else %}
+    <div class="alert alert-info">
+        <p class="mb-0">
+            <a href="{% url 'login' %}" class="btn btn-primary btn-sm mr-2">Войти</a>
+            <a href="{% url 'register' %}" class="btn btn-primary btn-sm ml-2">Зарегистрироваться</a>
+        </p>
+    </div>
+{% endif %}
+
+
+    <ul class="list-group">
+        {% for post in blog_posts %}
+            <li class="list-group-item">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text }}</p>
+                <p>Автор: {{ post.author.username }}</p>
+                <p>Дата добавления: {{ post.date_added }}</p>
+                <p>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                  <a href="{% url 'like_post' post.id %}">
+                    <i class="fas fa-thumbs-up"></i>
+                  </a>
+                  <span id="likes_count_{{ post.id }}">{{ post.likes.count }}</span>
+
+                  <a href="{% url 'dislike_post' post.id %}">
+                    <i class="fas fa-thumbs-down"></i>
+                  </a>
+                  <span id="dislikes_count_{{ post.id }}">{{ post.dislikes.count }}</span>
+                </p>
+                {% if user.is_authenticated and user == post.author %}
+                    <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-warning">Редактировать запись</a>
+                    <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-danger">Удалить запись</a>
+                {% endif %}
+
+
+                <br>
+                <hr>
+                <h2 class="display-6">Комментарии</h2>
+            <br>
+                {% if not post.comments.all %}
+                    Комментарии отсутствуют
+                </a>
+                {% else %}
+                    {% for comment in post.comments.all %}
+                        <strong> {{ comment.name }} </strong>
+                        <p> {{ comment.body }} </p>
+                        <p><small>{{ comment.date_added }}</small></p>
+                        <hr>
+                    {% endfor %}
+                {% endif %}
+
+                <p><a class="btn btn-primary" href="{% url 'add_comment' post.id %}">Комментировать</a></p>
+
+
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
